@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'build-essential::default'
+
 remote_file "/tmp/#{node[:porg][:arch_file_name]}" do
   source node[:porg][:url]
   action :create
